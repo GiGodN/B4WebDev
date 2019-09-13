@@ -9,8 +9,7 @@
 <body>
     <?php
     
-    date_default_timezone_set('MTC');
-    echo date('h:i:s a, l F jS Y e');
+    echo 'This is a test File do not write actual web page here'
     
     ?>
 </body>
