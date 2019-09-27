@@ -16,7 +16,6 @@
     <?php
         if (!empty($_REQUEST['name'])) {
             $name = $_REQUEST['name'];
-            print $name;
         }
         else {
             $name = NULL;
@@ -25,7 +24,6 @@
 
         if(!empty($_REQUEST['email'])) {
             $email = $_REQUEST['email'];
-            print $email;
         }
         else {
             $email = NULL;
@@ -36,11 +34,11 @@
             $comments = $_REQUEST['comments'];
         }
         else {
-            $comment = NULL;
+            $comments = NULL;
             print '<p class="error">Your Forgot to Enter Your Comments</p>';
         }
 
-        if (issest($_REQUEST['gender'])) {
+        if (isset($_REQUEST['gender'])) {
             $gender = $_REQUEST['gender'];
 
             if ($gender == "M") {
@@ -59,7 +57,7 @@
             print '<p class="error">Your Forgot to Enter Your Gender</p>';
         }
 
-        if (!empty($name) && !empty($email) && !empty($gender) && !empty($comments)) {
+        if ($name && $comments && $gender && $email) {
             print "<p>Thank You <strong>$name</strong>, for the following comments:</p>
             <pre>$comments</pre>
             <p>We will reply to you at <em>$email</em>.</p>";
