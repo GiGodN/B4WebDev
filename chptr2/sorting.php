@@ -25,9 +25,24 @@
                     'Donnie Darko' => 7
                 ];
 
-                print '<tr><td colspan="2"><strong>In their original order:</strong></td></tr>\n';
+                echo '<tr><td colspan="2"><strong>In their original order:</strong></td></tr>';
                 foreach($movies as $title => $rating) {
-                    print "<tr><td>$rating</td><td>$title</td></tr>\n";
+                    echo"\n";
+                    echo "<tr><td>$rating</td><td>$title</td></tr>\n";
+                }
+
+                ksort($movies);
+                echo '<tr><td colspan="2"><strong>Sorted by title:</strong></td></tr>';
+                foreach ($movies as $title => $rating) {
+                    echo"\n";
+                    echo "<tr><td>$rating</td><td>$title</td></tr>";
+                }
+
+                arsort($movies);
+                echo '<tr><td colspan="2"><strong>Sorted by rating:</strong></td></tr>';
+                foreach ($movies as $title => $rating) {
+                    echo"\n";
+                    echo "<tr><td>$rating</td><td>$title</td></tr>";
                 }
             ?>
         </tbody>
