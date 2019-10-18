@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Form</title>
+    <style type="text/css">
+        label {
+            font-weight: bold;
+            color: #200ACC;
+        }
+        p {
+            text-align: right;
+            margin: auto 0;
+            color: #555;
+        }
+        table {
+            margin: auto;
+        }
+        fieldset{
+            width: 35%;
+            margin: auto;
+        }
+        h3 {
+            text-align: right;
+            margin: auto 0; 
+        }
+        input[type="submit"]{
+            width: 5%;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form action="handle_form.php" method="post">
+        <fieldset>
+            <table>
+                <tr>
+                    <td><h3>Name </h3><p>Add your Name</p></td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td><h3>Email </h3><p>Enter A Valid Email</p></td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td><h3>Phone </h3><p>Add a Phone Number</p></td>
+                    <td><input type="text" name="phone"></td>
+                </tr>
+                <tr>
+                    <td><h3>Website </h3><p>Your Website</p></td>
+                    <td><input type="text" name="website"></td>
+                </tr>
+                <tr>
+                    <td><h3>Priority </h3><p>Priority Level</p></td>
+                    <td><select name="poriority">
+                        <option value="low">Low</option>
+                        <option value="normal">Normal</option>
+                        <option value="high">High</option>
+                        <option value="emergency">Emergency</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><h3>Type </h3><p>Type of contact</p></td>
+                    <td><select name="type">
+                        <option value="updateInfo">Website Update</option>
+                        <option value="changeInfo">Information Change</option>
+                        <option value="addInfo">Information Addition</option>
+                        <option value="newProduct">New Products</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><h3>Message </h3><p>Type Your Message</p></td>
+                    <td><textarea name="message" cols="20" rows="5"></textarea></td>
+                </tr>
+            </table>
+        </fieldset>
+        <p style="text-align: center;"><input type="submit" name="submit" value="Submit"></p>
+    </form>
+</body>
+</html>
