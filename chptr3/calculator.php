@@ -1,5 +1,6 @@
 <?php
 $page_title = 'Trip Cost Calculator';
+$active = "calc";
 include('includes/header.html');
 
 function create_radio($value, $name = 'gallon_price') {

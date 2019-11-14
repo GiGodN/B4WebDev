@@ -1,5 +1,6 @@
 <?php
     $page_title = 'Welcome';
+    $active = "home";
     function create_ad() {
         echo '<div class="alert alert-info" role="alert"><p>This is an annoying ad! This is an annoying ad!
         This is an annoying ad! This is an annoying ad!</p></div>';
