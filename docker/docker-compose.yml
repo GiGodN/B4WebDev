@@ -1,23 +1,23 @@
 version: '2'
 services:
-  mariadb:
-    image: 'bitnami/mariadb:10.3'
-    environment:
-      - MARIADB_ROOT_PASSWORD=bitnami
-    volumes:
-      - 'mariadb_data:/bitnami'
-  phpmyadmin:
-    build: .
-    ports:
-      - '80:80'
-      - '443:443'
-    depends_on:
-      - mariadb
-    volumes:
-      - ./DocumentRoot/:/opt/bitnami/phpmyadmin/html
-      - 'phpmyadmin_data:/bitnami'
+    mariadb:
+        image: 'bitnami/mariadb:10.3'
+        environment:
+         - MARIADB_ROOT_PASSWORD=bitnami
+        volumes:
+          - 'mariadb_data:/bitnami'
+    phpmyadmin:
+        build: .
+        ports:
+            - '80:80'
+            - '443:443'
+        depends_on:
+            - mariadb
+        volumes:
+            - ./DocumentRoot/:/opt/bitnami/phpmyadmin/html
+            - 'phpmyadmin_data:/bitnami'
 volumes:
-  mariadb_data:
-    driver: local
-  phpmyadmin_data:
-    driver: local
+    mariadb_data:
+        driver: local
+    phpmyadmin_data:
+        driver: local
